@@ -1,4 +1,4 @@
-# 🏗️ On-Prem SQL to Azure Data Engineering Project
+# 🏗️ On-Prem SQL to Azure - Data Engineering Project
 
 This project demonstrates how to modernize an on-premises SQL Server data platform by migrating to Azure, enabling scalable analytics, cost optimization, and advanced business insights. It follows the **Medallion Architecture (Bronze → Silver → Gold)** and implements end-to-end data engineering practices.
 
