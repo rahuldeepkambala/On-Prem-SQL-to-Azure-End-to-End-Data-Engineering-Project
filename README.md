@@ -22,7 +22,7 @@ The goal of this project is to modernize the existing on-prem SQL data platform 
 ## 🏗️ Architecture & Tech Stack
 
 ![Architecture Diagram](https://github.com/user-attachments/assets/32e4e1eb-d892-44d1-83bc-a6c922db6487)  
-*Logo placeholder: Add your company or Azure logo at top-left if needed.*
+
 
 **Architecture Flow:**  
 
