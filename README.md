@@ -19,14 +19,37 @@ The goal of this project is to modernize the existing on-prem SQL data platform 
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture & Tech Stack
 
 <img width="1033" height="563" alt="image" src="https://github.com/user-attachments/assets/32e4e1eb-d892-44d1-83bc-a6c922db6487" />
 
 
-**Flow:**  
-On-Prem SQL → Azure Data Factory → ADLS (Bronze → Silver → Gold) → Databricks → Power BI  
-+ Logic Apps for alerts and monitoring.  
+**Architecture Flow:**  
+Ingestion Layer (Bronze) – On-prem SQL data ingested using ADF into ADLS raw zone.
+
+Transformation Layer (Silver) – Databricks performs cleansing, standardization, and enrichment.
+
+Aggregation Layer (Gold) – Databricks creates curated Delta Tables for BI consumption.
+
+Consumption – Power BI dashboards built on Gold layer datasets.
+
+Monitoring & Deployment – Logic Apps for alerts, Azure DevOps for CI/CD.
+
+Tools & Services Used:
+
+🔄 Data Ingestion: Azure Data Factory (ForEach, If Condition, Incremental Loads)
+
+🗄️ Storage: Azure Data Lake Storage (Bronze/Silver/Gold)
+
+🔥 Processing: Azure Databricks (PySpark transformations)
+
+🗃️ Format: Delta Lake (partitioning, schema evolution, time travel)
+
+🔔 Alerts: Logic Apps (email notifications on pipeline failure/success)
+
+🚀 CI/CD: Azure DevOps + GitHub (ARM template deployments)
+
+📊 Visualization: Power BI.  
 
 ---
 
